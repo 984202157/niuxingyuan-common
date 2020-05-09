@@ -8,9 +8,9 @@ public class StringUtilTest {
 	public void testHasLength() {
 		boolean b = StringUtil.hasLength(" ");
 		if(b){
-			System.out.println("ÓĞ");
+			System.out.println("æ˜¯");
 		}else{
-			System.out.println("ÎŞ");
+			System.out.println("ä¸æ˜¯");
 		}		
 	}
 
@@ -18,9 +18,9 @@ public class StringUtilTest {
 	public void testHasText() {
 		boolean b = StringUtil.hasText(" ");
 		if(b){
-			System.out.println("ÓĞ");
+			System.out.println("æ˜¯");
 		}else{
-			System.out.println("ÎŞ");
+			System.out.println("ä¸æ˜¯");
 		}
 	}
 
@@ -42,4 +42,38 @@ public class StringUtilTest {
 		System.out.println(name);
 	}
 
+	@Test
+	public void testGetValue() {
+		 String value = StringUtil.getValue("åŒ—äº¬å…«ç ”ä¿®å­¦é™¢", 2);
+		 System.out.println(value);
+		
+	}
+	@Test
+	public void testNumber() {
+		boolean b = StringUtil.isNumber("-123.123.1");
+		System.out.println(b);
+		
+	}
+	@Test
+	public void testEmain() {
+		boolean b = StringUtil.isEMail("348828809@qq.com");
+		System.out.println(b);
+		
+	}
+	
+	@Test
+	public void testPhone() {
+		boolean b = StringUtil.isPhone("18710137879");
+		System.out.println(b);
+		
+	}
+	@Test
+	public void testPlaceholderValue() {
+		
+				 
+		String s1="http://news.cnstock.com/news,yw-201908-4413224.htm";
+		String str = StringUtil.getPlaceholderValue(s1, "");
+		System.out.println(str);
+		
+	}
 }
